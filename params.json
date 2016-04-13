@@ -1,6 +1,6 @@
 {
   "name": "Gxmario.GitHub.io",
   "tagline": "gxmario的博客",
-  "body": "# gxmario.github.io\r\ngxmario的博客\r\n",
+  "body": "## 查看firewalld状态\r\nsystemctl status firewalld\r\n## 停止firewalld\r\nsystemctl stop firewalld\r\n# firewall-cmd 指令\r\n\r\n---\r\n\r\n## 查看firewalld状态\r\nfirewall-cmd --state\r\n\r\n## 查看某个接口是属于哪个zone的\r\nfirewall-cmd --get-zone-of-interface=eth0\r\n\r\n## 查看某个zone里开启了哪些服务、端口、接口：\r\nfirewall-cmd --zone=public --list-all\r\n\r\n## 查看某个zone里开启了哪些服务：\r\nfirewall-cmd --zone=public --list-services\r\n\r\n## 查看某个zone里开启了哪些端口：\r\nfirewall-cmd --zone=public --list-ports\r\n\r\n## 把接口加入到某个zone：\r\nfirewall-cmd [--zone=<zone>] --add-interface=<interface>\r\n\r\n## 把eth0加入到默认zone\r\nfirewall-cmd --add-interface=eth0\r\n\r\n## 使设定永久生效\r\nfirewall-cmd --permanent *******\r\n(reload之后生效)\r\n\r\n## 获取所有服务\r\nfirewall-cmd --get-services\r\n\r\n## 为zone添加端口/协议\r\nfirewall-cmd [--permanent] [--zone=zone] --add-port=portid[-portid]/protocol [--timeout=timeval]\r\nThe port can either be a single port number or a port range portid-portid. The protocol can either be tcp or udp.\r\n\r\n## 为zone移除端口/协议\r\n[--permanent] [--zone=zone] --remove-port=portid[-portid]/protocol\r\n\r\n## 为zone添加服务\r\n[--permanent] [--zone=zone] --add-service=service [--timeout=timeval]\r\n\r\n## 为zone移除服务\r\n[--permanent] [--zone=zone] --remove-service=service [--timeout=timeval]",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
